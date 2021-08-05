@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- codificação de caracteres -->
+        <meta charset="utf-8">
+        
+        <!-- configuração de responsivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS externo -->
+        <link rel="stylesheet" type="text/css" href="velha.css">
+        
+        <!-- título da página -->
+        <title>Jogo da Velha</title>
+        
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <!-- script externo -->
+        <script src="velha.js"></script>
+        
+        
+    </head>
+<body>
+    <header>
+        Jogo da Velha
+    </header>
+	<form>
+		<h5>Nome do Jogador 1:</h5>
+		<input type="text" maxlength=10 id="nome_1"/>
+		<h5>Nome do Jogador 2:</h5>
+		<input type="text" maxlength=10 id="nome_2"/>
+		<input type="button" id="confirma" value="OK"/>
+		<input type="button" id="cancela" value="Cancelar"/>
+	</form>
+    <main>
+        <section>
+            <div id="quadro_0"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div><div id="quadro_1"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div><div id="quadro_2"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div><div id="quadro_3"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div><div id="quadro_4"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div><div id="quadro_5"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div><div id="quadro_6"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div><div id="quadro_7"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div><div id="quadro_8"><img src="imagem_o.png" class="bola"><img src="imagem_x.png" class="xis"></div>
+        </section>
+        <aside>
+            <article id="tempo">
+                <h3>Cronômetro</h3>
+                <p><span id="mmss">00:00</span></p>
+            </article>
+            <article id="turno" class="turno_1">
+                <h3>Turno atual:</h3>
+                <p><span id="jogador_atual">Jogador 1</span></p>
+            </article>
+            <article id="historico">
+                <h3>Vitórias:</h3>
+                <section id="jog_1">
+					<h4>Jogador 1</h4>
+                	<p><span id="vitorias1">0</span></p>
+				</section>
+				<section id="jog_2">
+                	<h4>Jogador 2</h4>
+                	<p><span id="vitorias2">0</span></p>
+				</section>
+                <section id="jog_v">
+                	<h4>Velha</h4>
+                	<p><span id="velha">0</span></p>
+				</section>
+			</article>
+        </aside>
+	</main>
+	<footer>
+		<menu>
+			<input type="button" id="novo_jogo" value="Novo Jogo"/>
+			<input type="button" id="renomear" value="Renomear Jogadores"/>
+			<input type="button" id="resetar" value="Resetar Placar"/>
+			<input type="button" id="passar" value="Passar a Vez"/>
+		</menu>
+	</footer>
+</body>
+</html>
